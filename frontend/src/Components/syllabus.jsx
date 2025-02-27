@@ -4,56 +4,56 @@ const SyllabusForm = () => {
   const [formData, setFormData] = useState({
     courseCode: '',
     courseTitle: '',
-    ltpc: '3-0-0-3',
+    ltpc: '0-0-0-0',
     prerequisites: '',
     objectives: '',
     outcomes: '',
     modules: [
       { 
         id: 1, 
-        title: '', 
+        title: 'Module-I', 
         content: '', 
         hours: 9 
       },
       { 
         id: 2, 
         title: 'Module-II', 
-        content: 'Basics of Web Content Accessibility Guidelines – Principles: Perceivable – Operable – Understandable – Robust – Various Levels of Accessibility – WCAG standards evaluation tools and Comparative analysis.', 
+        content: '', 
         hours: 9 
       },
       { 
         id: 3, 
         title: 'Module-III', 
-        content: 'Accessibility of web page components: Images – Hyperlinks – Color contrast – Tables – Forms – Document Accessibility – Video accessibility – Audio accessibility – Static vs Dynamic page accessibility.', 
+        content: '', 
         hours: 9
       }
     ],
     references: [
       { 
         id: 1, 
-        author: 'Simon Harper, Yeliz Yesilada (Editors)', 
-        title: 'Web Accessibility: A Foundation for Research', 
-        publisher: 'Springer Publications', 
-        year: '2010' 
+        author: '', 
+        title: '', 
+        publisher: '', 
+        year: '' 
       }
     ],
     webResources: [
       { 
         id: 1, 
-        title: 'W3C Resources on Web Accessibility', 
-        url: 'https://www.w3.org/WAI/intro/accessibility.php' 
+        title: '', 
+        url: '' 
       },
       { 
         id: 2, 
-        title: 'WebAIM(Web Accessibility in Mind) Resources', 
-        url: 'http://webaim.org' 
+        title: '', 
+        url: '' 
       }
     ],
     onlineCourses: [
       {
         id: 1,
-        title: 'Introduction to Web Accessibility by Google',
-        url: 'https://webaccessibility.withgoogle.com/course'
+        title: '',
+        url: ''
       }
     ]
   });
@@ -206,7 +206,7 @@ const SyllabusForm = () => {
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">L, T, P, C</label>
+                    <label className="block text-sm font-medium text-gray-700 mb-1">L-T-P-C</label>
                     <input
                       type="text"
                       name="ltpc"

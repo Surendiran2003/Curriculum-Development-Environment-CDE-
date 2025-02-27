@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import home from "./../assets/home.png";
+import home from "./../assets/image.png";
 import logo from "./../assets/logo.png";
 import { useNavigate } from "react-router-dom";
 
@@ -26,52 +26,49 @@ const HomePage = () => {
       }`}
     >
       {/* Navigation Bar */}
-      <nav
-        className={`${
-          darkMode ? "bg-gray-800" : "bg-emerald-200"
-        } px-6 py-5 flex justify-between items-center shadow-md`}
-      >
-        <a href="/">
-          <img className="h-12 w-auto" src={home} alt="Home Logo" />
-        </a>
-        <div className="flex items-center space-x-8">
-          <a
-            href="#"
-            className={`text-lg font-medium ${
-              darkMode ? "text-gray-200" : "text-gray-800"
-            }`}
-          >
-            Home
-          </a>
-          <a
-            href="#"
-            className={`text-lg font-medium ${
-              darkMode ? "text-gray-200" : "text-gray-800"
-            }`}
-          >
-            About
-          </a>
+      <nav className={`${darkMode ? "bg-gray-800" : "bg-emerald-200"} px-6 py-5 flex items-center shadow-md`}>
+  {/* Logo on the Left */}
+  <a href="/" className="flex-none">
+    <img className="h-12 w-auto" src={home} alt="Home Logo" />
+  </a>
 
-          {/* Dark Mode Toggle */}
-          <button
-            onClick={() => setDarkMode(!darkMode)}
-            className={`w-14 h-7 ${
-              darkMode ? "bg-gray-600" : "bg-gray-300"
-            } rounded-full p-1 flex items-center transition-all`}
-          >
-            <div
-              className={`w-5 h-5 rounded-full transition-all ${
-                darkMode ? "bg-yellow-600 ml-auto" : "bg-gray-800"
-              }`}
-            ></div>
-          </button>
-        </div>
-      </nav>
+  {/* Centered Title */}
+  <div className="flex-1 flex justify-center">
+    <h1 className="lg:text-5xl font-extrabold text-justify">
+      <span>Pondicherry</span>{' '}
+      <span className={darkMode ? "text-cyan-400" : "text-cyan-500"}>University</span>
+    </h1>
+  </div>
+
+  {/* Navigation & Dark Mode Toggle */}
+  <div className="flex items-center space-x-8 flex-none">
+    <a href="#" className={`text-lg font-medium ${darkMode ? "text-gray-200" : "text-gray-800"}`}>
+      Home
+    </a>
+    <a href="#" className={`text-lg font-medium ${darkMode ? "text-gray-200" : "text-gray-800"}`}>
+      About
+    </a>
+
+    {/* Dark Mode Toggle */}
+    <button
+      onClick={() => setDarkMode(!darkMode)}
+      className={`w-14 h-7 ${darkMode ? "bg-gray-600" : "bg-gray-300"} rounded-full p-1 flex items-center transition-all`}
+    >
+      <div
+        className={`w-5 h-5 rounded-full transition-all ${
+          darkMode ? "bg-yellow-600 ml-auto" : "bg-gray-800"
+        }`}
+      ></div>
+    </button>
+  </div>
+</nav>
 
       {/* Main Content */}
       <main className="container mx-auto flex flex-col-reverse md:flex-row items-center justify-center px-6 py-16 mt-12">
         {/* Left Content - Text */}
+      
         <div className="md:w-1/2 text-center md:text-left space-y-6">
+        <br/>
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight max-w-3xl">
             <span className="whitespace-nowrap">
               Curriculum Development
@@ -98,6 +95,7 @@ const HomePage = () => {
             A modern open-source tool for creating, managing, and sharing course
             syllabi effortlessly.
           </p>
+          <br/>
           <button
             onClick={() => navigate("/syllabus")}
             className={`${
