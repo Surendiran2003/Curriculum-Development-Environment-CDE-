@@ -273,7 +273,7 @@ const SyllabusForm = () => {
                 <h2 className="text-xl font-bold border-b border-gray-300 pb-2 mb-4">Module details</h2>
                 <div className="space-y-4">
                   {formData.modules.map((module) => (
-                    <div key={module.id} className="border border-gray-200 rounded p-3">
+                    <div key={module.id} className="border border-gray-200  rounded p-3">
                       <div className="flex justify-between items-center mb-2">
                         <h3 className="font-medium">{module.title}</h3>
                         <div className="space-x-2">
@@ -503,26 +503,26 @@ const SyllabusForm = () => {
 
               <div className="space-y-4 text-sm">
                 <div>
-                  <p className="font-semibold italic">Prerequisites:</p>
-                  <ul className="list-disc pl-6">
-                    <li>{formData.prerequisites}</li>
+                  <p className="font-semibold underline italic">Prerequisites:</p>
+                  <ul className="list-disc pl-9">
+                    <li className="pl-3">{formData.prerequisites}</li>
                   </ul>
                 </div>
                 
                 <div>
-                  <p className="font-semibold italic">Objectives:</p>
-                  <ul className="list-disc pl-6">
+                  <p className="font-semibold underline italic">Objectives:</p>
+                  <ul className="list-disc pl-9">
                     {formData.objectives.split(',').map((obj, idx) => (
-                      <li key={idx}>{obj.trim()}</li>
+                      <li className="pl-3" key={idx}>{obj.trim()}</li>
                     ))}
                   </ul>
                 </div>
                 
                 <div>
-                  <p className="font-semibold italic">Outcomes:</p>
-                  <ul className="list-disc pl-6">
+                  <p className="font-semibold underline italic">Outcomes:</p>
+                  <ul className=" list-disc pl-9">
                     {formData.outcomes.split(',').map((outcome, idx) => (
-                      <li key={idx}>{outcome.trim()}</li>
+                      <li  className="pl-3" key={idx}>{outcome.trim()}</li>
                     ))}
                   </ul>
                 </div>
@@ -542,7 +542,7 @@ const SyllabusForm = () => {
                 
                 {/* References */}
                 <div>
-                  <p className="font-semibold italic">Reference Book(s):</p>
+                  <p className="font-semibold underline italic">Reference Book(s):</p>
                   <ol className="list-decimal pl-6">
                     {formData.references.map((ref) => (
                       <li key={ref.id}>
@@ -554,7 +554,7 @@ const SyllabusForm = () => {
                 
                 {/* Web Resources */}
                 <div>
-                  <p className="font-semibold italic">Web Resource(s):</p>
+                  <p className="font-semibold underline italic">Web Resource(s):</p>
                   <ol className="list-decimal pl-6">
                     {formData.webResources.map((resource) => (
                       <li key={resource.id}>
