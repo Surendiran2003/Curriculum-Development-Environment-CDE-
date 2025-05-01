@@ -1,0 +1,4 @@
+
+DELETE  http://127.0.0.1:8000/syllabus/1745852662654/
+Content-Type: application/json
+
