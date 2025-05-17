@@ -45,7 +45,7 @@ const HomePage = () => {
 
           <div className="flex gap-4 mt-8 justify-center md:justify-start">
             <button
-              onClick={() => navigate("/departments")}
+              onClick={() => navigate("/notfound")}
               className={`px-8 py-3 text-lg font-semibold rounded-lg transition-all duration-300 ${
                 darkMode 
                   ? "bg-gray-800 hover:bg-gray-700 text-white border border-gray-700" 

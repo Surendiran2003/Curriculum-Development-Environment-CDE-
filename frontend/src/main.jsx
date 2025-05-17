@@ -15,20 +15,26 @@ import SyllabusDashboard from './Components/syllabusNew/syllabusDashboard.jsx'
 import CurriculumDashboard from './Components/Curriculum/CurriculumDashboard.jsx'
 import CurriculumBuilder from './Components/Curriculum/CurriculumBuilder.jsx'
 import CurriculumCoursesView from './Components/Curriculum/CurriculumCourseView.jsx'
+import NotFoundPage from './Components/NotFound.jsx'
 const router=createBrowserRouter([
   { 
     element: <App/>,
     children:[
-      {
-        path: '/about',
-        element:<About/>
-      },
 
     ]
   },
   {
+    path: '/about',
+    element:<About/>
+  },
+
+  {
     path:'/syllabus',
     element:<SyllabusForm/>
+  },
+  {
+    path: '/notfound',
+    element:<NotFoundPage/>
   },
 {
  path:'/syllabusform',
